@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui;
+  --font-display: var(--font-outfit), var(--font-inter), ui-sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  @apply transition-colors duration-300;
+}
+
+@layer base {
+  a, button, input[type="button"], input[type="submit"], input[type="checkbox"], input[type="radio"], input[type="range"], select, label[for], summary {
+    @apply cursor-pointer transition-all duration-200 ease-in-out outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-black;
+  }
+}
+
+.glass-card {
+  @apply cursor-pointer bg-white/70 dark:bg-gray-900/70 backdrop-blur-md border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-lg hover:border-blue-500/30 transition-all duration-300;
+}
+
+.btn-primary {
+  @apply cursor-pointer px-6 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-md shadow-blue-600/20 active:scale-95 transition-all;
+}
+
+.btn-secondary {
+  @apply cursor-pointer px-6 py-2.5 bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-bold rounded-xl border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 active:scale-95 transition-all;
+}
