@@ -7,6 +7,9 @@ A modern, fast, and SEO-optimized collection of essential web utility tools. Bui
 - **Image to WebP Converter**: Optimize your images for the web with ease.
 - **Password Generator**: Create secure, customizable passwords instantly.
 - **Lorem Ipsum Generator**: Quick and flexible placeholder text generation.
+- **Word Counter**: Detailed statistics for your text.
+- **Case Converter**: Convert text between different letter cases.
+- **SQL Formatter**: Pretty-print and format your SQL queries.
 - **Base64 Converter**: Encode and decode strings and files to/from Base64.
 - **Modern UI**: Clean, responsive design with dark mode support.
 - **SEO Focused**: Optimized for search engines and high performance.
